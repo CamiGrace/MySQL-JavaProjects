@@ -79,7 +79,7 @@ private List<String> operations = List.of(
 		//Deselect current project 
 		curProject = null;
 		
-		// throw Exception if invalid Id entered 
+		// selects project based on ID and sets it as the current project  
 		curProject= projectService.fetchProjectById(projectId);
 		
 		
@@ -88,7 +88,8 @@ private List<String> operations = List.of(
 		List<Project> projects = projectService.fetchAllProjects();
 		
 		System.out.println("\nProjects:");
-	
+		// print out each available project when user input 2
+		
 		projects.forEach(project -> System.out.println("   " + project.getProjectId() + ": " + project.getProjectName()));
 		
 	}

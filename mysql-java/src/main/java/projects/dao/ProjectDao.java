@@ -75,7 +75,7 @@ public class ProjectDao extends DaoBase {
 
 
 	public List<Project> fetchAllProjects() {
-		String sql = "SELECT * FROM " + PROJECT_TABLE + " ORDER BY project_name";
+		String sql = "SELECT * FROM " + PROJECT_TABLE + " ORDER BY project_id";
 		
 		try (Connection conn = DbConnection.getConnection()) {
 			startTransaction(conn);
